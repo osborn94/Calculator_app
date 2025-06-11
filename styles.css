@@ -1,0 +1,161 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  height: 100vh;       
+  margin: 0;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.5fr 0.5fr; /* Last two columns smaller */
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  padding: 20px;
+  background: #242530;
+  width: 400px;
+  height: 367;
+  justify-self: center;
+  
+}
+
+.grid-item {
+  background-color: #404258;
+  color: white;
+  padding: 9px;
+  text-align: center;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+}
+
+.grid-item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: scale(1.05);
+}
+
+.mth_op{
+  background-color: #F49D1A;
+  border-radius: 35px;
+  
+}
+
+.equal-to {
+  background-color: #B2B2B2;
+  color: black;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.dot {
+  padding-top: 20px;
+}
+
+
+.textBox {
+  grid-column: 1 / -1; /* span all columns */
+  background-color: #3A3F77;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 15px;
+
+}
+
+.textBox:focus {
+  outline: none;
+  background-color: #4A50A0;
+}
+
+/* backspace image */
+.pentagon{
+  width: 33px;
+  height: 24px;
+  filter: invert(100%);
+  
+}
+
+/* Result history */
+.history {
+  width: 200px;
+  margin-top: 20px;
+  background: #1e1f29;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  margin-left: 50px;
+}
+
+.history h3 {
+  margin: 0 0 5px;
+}
+
+.history ul {
+  list-style: none;
+  padding-left: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.history li {
+  padding: 3px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #444;
+}
+
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+    background-color: #000;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .grid-container {
+    gap: 5px;
+    padding: 10px;
+    background: #242530;
+    width: 200px;
+    justify-self: center;
+
+  }
+  .grid-item {
+    background-color: #404258;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: larger;
+
+  }
+
+  .history {
+    width: 55px;
+    margin-top: 20px;
+    background: #1e1f29;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 10px;
+  }
+  #canc{
+  background-color: rgb(233, 80, 80);
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.textBox {
+  background-color: #93939c;
+  font-size: larger;
+
+}
+
+}
