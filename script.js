@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Replace visual operators with valid JavaScript operators
           const expression = display.value
             .replace(/x/g, '*')
+            .replace(/%/g, '/100')
             .replace(/÷/g, '/');
 
           const result = math.evaluate(expression); // Evaluate using math.js
